@@ -150,7 +150,6 @@ body {
   background: linear-gradient(to right, #556270, #4ECDC4);
 }
 .main-container {
-  width: 95vw;
   margin: auto;
   font-family: 'Lato', sans-serif;
   background: #eee;
@@ -161,6 +160,11 @@ body {
     width: 50vw;
   }
 }
+@media (max-width: 500px) {
+  .main-container {
+    width: 100vw;
+  }
+}
 .main-container h2 {
   font-size: 2.25rem;
   margin: 1.25rem 0;
@@ -169,7 +173,7 @@ body {
   display: flex;
   justify-content: space-between;
   font-size: 3rem;
-  padding: 1.5rem;
+  padding: 3rem;
 }
 @media (min-width: 1000px) {
   .main-container nav {
@@ -188,7 +192,7 @@ body {
 .main-container .intro {
   display: flex;
   flex-flow: column wrap;
-  padding: 1.5rem;
+  padding: 1rem;
   text-align: center;
   align-items: center;
   font-size: 2.25rem;
@@ -223,7 +227,7 @@ body {
   color: #eee;
 }
 .main-container main {
-  padding: 1.5rem;
+  padding: 3rem;
   font-size: 1.75rem;
   justify-content: space-between;
   min-height: 50vh;
@@ -237,7 +241,7 @@ body {
 }
 .main-container .history {
   font-size: 1.75rem;
-  padding: 2rem;
+  padding: 1rem;
   border: 2px solid #ddd;
   border-radius: 10px;
 }
@@ -248,9 +252,14 @@ body {
   font-size: 1.25rem;
   display: block;
 }
+@media (max-width: 5em) {
+  .main-container .history li span {
+    font-size: 0.6rem;
+  }
+}
 .main-container footer {
   text-align: center;
   background: linear-gradient(to bottom, #004e92, #000428);
   color: #eee;
-  padding: 1.5rem;
+  padding: 1rem;
 }

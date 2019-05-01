@@ -57,7 +57,8 @@ table {
 @text-size-huge: 3rem;
 @text-size-xtralarge: 5rem;
 
-@padding-sm: 1.5rem;
+@padding-sm: 1rem;
+@padding-md: 3rem;
 
 @main-gradient: linear-gradient(to right, #556270, #4ECDC4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 @secondary-gradient: linear-gradient(to top, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -89,13 +90,15 @@ html, body {
 }
 
 .main-container{
-	width: 95vw;
 	margin: auto;
 	font-family: 'Lato', sans-serif;
 	background: @seconday-color;
 
 	@media(min-width: 1000px){
 		width: 50vw;
+	}
+	@media(max-width: 500px){
+		width: 100vw;
 	}
 	h2 {
 		font-size: @text-size-large;
@@ -105,7 +108,7 @@ html, body {
 		display: flex;
 		justify-content: space-between;
 		font-size: @text-size-huge;
-		padding: @padding-sm;
+		padding: @padding-md;
 		@media(min-width: 1000px){
 			padding: 0;
 			font-size: @text-size-med;
@@ -158,7 +161,7 @@ html, body {
 	 /************************   MAIN *****************************************/
 	main {
 
-		padding: @padding-sm;
+		padding: @padding-md;
 		font-size: @text-size-med;
 		justify-content: space-between;
 		min-height: 50vh;
@@ -173,13 +176,16 @@ html, body {
 	}
 	.history {
 		font-size: @text-size-med;
-		padding: 2rem;
+		padding: @padding-sm;
 		.border();
 		li {
 			margin: 20px 0;
 			span {
 				font-size: @text-size-small;
 				display: block;
+				@media(max-width: 5em){
+					font-size: .6rem;
+				}
 			}
 		}
 	}
